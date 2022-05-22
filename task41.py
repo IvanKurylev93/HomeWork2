@@ -39,23 +39,23 @@ def decode_file(strc):
 
 text = 'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW'
 print(f'Предоставлен следующий текст: \n{text}')
-with open('42_decode.txt', 'w') as data:
+with open('41_decode.txt', 'w') as data:
     data.write(text)
 
-with open('42_decode.txt', 'r') as data:
+with open('41_decode.txt', 'r') as data:
     my_text = data.read()
 
 strc = encode_file(my_text)
 print(f'Сжатый текст будет вот такого вида: \n{strc}') # Проверка магии
 
-with open('42_code2.txt', 'w') as data:
+with open('41_code2.txt', 'w') as data:
     data.write(strc)
 
-with open('42_code2.txt', 'r') as data:
+with open('41_code2.txt', 'r') as data:
     my_text = data.read()
 
 total = decode_file(my_text)
 print(f'Восстановленный текст будет следующего вида: \n{total}') # проверка второй магии
 
-with open('42_decode.txt', 'w') as data:
+with open('41_decode.txt', 'w') as data:
     data.write(total)
